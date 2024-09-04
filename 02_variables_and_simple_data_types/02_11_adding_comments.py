@@ -1,0 +1,1 @@
+# The comments are in 02_07_stripping_names.py and 02_05_famous_quote.py
