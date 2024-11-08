@@ -1,0 +1,8 @@
+You can print in python.
+You can work with numbers in python.
+You can make lists in python.
+You can use if and elses in python.
+You can use for and while loops in python.
+You can make dictionaries in python.
+You can take user input in python.
+You can make functions and classes in python.
