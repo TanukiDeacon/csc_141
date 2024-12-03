@@ -1,5 +1,6 @@
 import pygame 
 from pygame.sprite import Sprite
+from  settings import Settings
 
 class Bullet(Sprite):
     def __init__(self, ai_game):
@@ -8,9 +9,11 @@ class Bullet(Sprite):
         self.settings = ai_game.settings
         self.color = self.settings.bullet_color
 
+        self.image = pygame.image.load('bullet.png').convert_alpha()
+        self.image = pygame.transform.scale(self.image, (40, 40))  
+        self.rect = self.image.get_rect()
 
-        self.rect = pygame.Rect(0, 0, self.settings.bullet_width,
-            self.settings.bullet_height)
+        #self.rect = pygame.Rect(0, 0, self.settings.bullet_width,   self.settings.bullet_height)
         self.rect.midtop = ai_game.ship.rect.midtop
 
         self.y = float(self.rect.y)
@@ -21,5 +24,8 @@ class Bullet(Sprite):
         self.rect.y = self.y
 
     def draw_bullet(self):
-        pygame.draw.rect(self.screen, self.color, self.rect)
+        self.screen.blit(self.image, self.rect)
+        #pygame.draw.rect(self.screen, self.color, self.rect)
+
+  
 
